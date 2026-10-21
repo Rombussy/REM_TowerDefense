@@ -74,6 +74,6 @@ public class EntityMovementManager : MonoBehaviour
 
     private void EndPoint()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 }
