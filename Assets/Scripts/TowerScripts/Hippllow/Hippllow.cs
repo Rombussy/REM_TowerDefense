@@ -8,6 +8,7 @@ public class Hippllow : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int circlePoints = 14;
+    //[SerializeField] private float FeatherSpawnrate = 3f; //spawnrate
 
     private bool entityInRadius;
 
