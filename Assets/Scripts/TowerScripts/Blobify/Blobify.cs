@@ -6,13 +6,14 @@ public class Blobify : MonoBehaviour
     [SerializeField] private float radius = 4f;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int circlePoints = 14;
-    //[SerializeField] private float NoteSpawnrate = 3f;
+    [SerializeField] private float NoteSpawnrate = 1.5f;
     [SerializeField] private float speed = 10f;
     [SerializeField] private GameObject musicnotePrefab;
     [SerializeField] private int NoteCount = 5;
     public float NoteLifetime = 0.5f;
 
     private bool entityInRadius;
+    private float nextNoteTime = 0f;
 
     void Update()
     {
@@ -22,9 +23,10 @@ public class Blobify : MonoBehaviour
 
         bool inRadius = IsEntityInRadius();
 
-        if (inRadius && !entityInRadius)
+        if (inRadius && !entityInRadius && Time.time > nextNoteTime)
         {
             burst();
+            nextNoteTime = Time.time + NoteSpawnrate;
         }
     }
 

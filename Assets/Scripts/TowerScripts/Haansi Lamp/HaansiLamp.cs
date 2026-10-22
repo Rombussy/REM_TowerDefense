@@ -10,8 +10,9 @@ public class HaansiLamp : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float radius = 4f;
     [SerializeField] private int circlePoints = 14;
-    public TurrentAim TurrentAim;
+    public float zapRate = 1f;
     private bool hiddenentityWasInSight;
+    public float nextZapTime = 0f;
 
     void Update()
     {
@@ -21,10 +22,10 @@ public class HaansiLamp : MonoBehaviour
 
         bool inSights = IsHiddenEntityInSight();
 
-        if (inSights && !hiddenentityWasInSight)
+        if (inSights && Time.time > nextZapTime)
         {
-            TurrentAim.TurrentRotate();
             Shoot();
+            nextZapTime = Time.time + zapRate;
         }
         hiddenentityWasInSight = inSights;
     }

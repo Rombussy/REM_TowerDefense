@@ -4,6 +4,7 @@ public class MusicNoteProjectile : MonoBehaviour
 {
     private float speed = 10f;
     private Vector3 direction;
+    //private float ProjectileDistance = 0.5f;
 
     void Update()
     {

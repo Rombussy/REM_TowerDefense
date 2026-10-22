@@ -8,9 +8,10 @@ public class Hippllow : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int circlePoints = 14;
-    //[SerializeField] private float FeatherSpawnrate = 3f; //spawnrate
+    [SerializeField] private float FeatherSpawnrate = 1.4f; 
 
     private bool entityInRadius;
+    private float nextFeatherTime = 0f;
 
     void Update()
     {
@@ -20,9 +21,10 @@ public class Hippllow : MonoBehaviour
 
         bool inRadius = IsEntityInRadius();
 
-        if (inRadius && !entityInRadius)
+        if (inRadius && Time.time > nextFeatherTime)
         {
             Shoot();
+            nextFeatherTime = Time.time + FeatherSpawnrate;
         }
 
         entityInRadius = inRadius;
