@@ -1,0 +1,58 @@
+using UnityEngine;
+using System.Collections;
+[System.Serializable]
+public struct WaveGroup
+{
+    public EntityType entityType;
+    public int count;
+    public float spawnInterval;
+
+}
+[System.Serializable]
+public struct Wave
+{
+    public WaveGroup[] waveGroups;
+}
+
+public class WaveManager : MonoBehaviour
+{
+    public PathManager pathManager;
+    public EntitySpawn entitySpawner;
+    public Wave[] waves;
+    private int waveIndex = 0;
+    private bool waveStarting = false;
+
+    public void NextWave()
+    {
+        if (waveStarting || waveIndex >= waves.Length)
+            return;
+
+        StartCoroutine(WaveRoutine(waves[waveIndex]));
+        waveIndex++;
+
+        
+    }
+    private IEnumerator WaveRoutine(Wave wave)
+    {
+        waveStarting = true;
+        foreach (WaveGroup group in wave.waveGroups)
+        {
+            for (int i= 0; i < group.count; i++)
+            {
+                entitySpawner.SpawnEntity(group.entityType, pathManager.cachedPath);
+                yield return new WaitForSeconds(group.spawnInterval);
+            }
+        }
+        waveStarting = false;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            NextWave();
+        }
+    }
+
+
+}

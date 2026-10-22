@@ -3,53 +3,24 @@ using System.Collections;
 
 public class EntityMovementManager : MonoBehaviour
 {
-    [System.Serializable]
-    public struct PathSegmentSetup
-    {
-        public Transform p0;
-        public Transform p1;
-        public Transform p2;
-        public Transform p3;
-    }
-
     public float _entitySpeed = 3f;
-
-    public PathSegmentSetup[] pathSetup;
     private BezierSegment[] pathSegments;
     private int segmentIndex = 0;
 
-    private void Start()
-    {
-        if (pathSetup != null && pathSetup.Length > 0)
-        {
-            // Read position coordinates directly from your dragged GameObjects
-            pathSegments = new BezierSegment[pathSetup.Length];
-            for (int i = 0; i < pathSetup.Length; i++)
-            {
-                pathSegments[i] = new BezierSegment(
-                    pathSetup[i].p0.position,
-                    pathSetup[i].p1.position,
-                    pathSetup[i].p2.position,
-                    pathSetup[i].p3.position
-                );
-            }
-
-            Initialize(pathSegments);
-        }
-    }
-
     public void Initialize(BezierSegment[] segments)
     {
+        StopAllCoroutines();
         pathSegments = segments;
+        segmentIndex = 0;
 
         if (pathSegments != null && pathSegments.Length > 0)
         {
             transform.position = pathSegments[0].p0;
-            StartCoroutine(FollowPath(segments));
+            StartCoroutine(FollowPath());
         }
     }
 
-    private IEnumerator FollowPath(BezierSegment[] pathSegments)
+    private IEnumerator FollowPath()
     {
         while (segmentIndex < pathSegments.Length)
         {
@@ -74,6 +45,6 @@ public class EntityMovementManager : MonoBehaviour
 
     private void EndPoint()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
-}
+}   
