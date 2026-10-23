@@ -21,7 +21,7 @@ public class Hippllow : MonoBehaviour
 
         bool inRadius = IsEntityInRadius();
 
-        if (inRadius && Time.time > nextFeatherTime)
+        if (inRadius && !entityInRadius && Time.time > nextFeatherTime)
         {
             Shoot();
             nextFeatherTime = Time.time + FeatherSpawnrate;

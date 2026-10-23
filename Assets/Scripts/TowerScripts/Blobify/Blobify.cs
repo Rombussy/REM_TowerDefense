@@ -56,11 +56,14 @@ public class Blobify : MonoBehaviour
         }
     }
 
-    public void AddNote()
+    public void Upgrade2()
     {
-        if (NoteCount < 8)
+        if (NoteCount < 6)
         {
             NoteCount++;
+            radius += 1f;
+            NoteSpawnrate += 1.1f;
+            NoteLifetime += 0.1f;
         }
     }
 
