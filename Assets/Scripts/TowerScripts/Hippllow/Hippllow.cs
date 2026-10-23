@@ -12,7 +12,7 @@ public class Hippllow : MonoBehaviour
     [SerializeField] private float FeatherInterval = 0.3f;
     [SerializeField] private Sprite upgrade2;
     [SerializeField] private Sprite upgrade3;
-
+    public int upgradeLevel = 0;
     private SpriteRenderer spriteRenderer;
     private float nextFeatherTime = 0f;
     private int feathersShot = 0;
