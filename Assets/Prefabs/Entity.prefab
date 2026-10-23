@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4667549318806414012}
   - component: {fileID: 7848207122216004176}
   - component: {fileID: 4066250370455923672}
-  - component: {fileID: -4982772960710226313}
+  - component: {fileID: -1268887071352620285}
+  - component: {fileID: -6314150019815990186}
   m_Layer: 0
   m_Name: Entity
   m_TagString: Entity
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.06, y: 4.27, z: 0}
-  m_LocalScale: {x: 0.37459213, y: 0.37459213, z: 0.37459213}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 9129091637853682776, guid: 1515d0d87ad94a247b6b4eb15edb2c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EntityMovementManager
   damageToPlayer: 10
   _entitySpeed: 1
---- !u!114 &-4982772960710226313
+--- !u!114 &-1268887071352620285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,6 +120,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e196ca0386d4fd844ad78ae59fb04709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityHP
-  maxHealth: 100
-  currentHealth: 100
-  dmg: 50
+  maxHealth: 1
+  currentHealth: 1
+  isStealth: 0
+--- !u!95 &-6314150019815990186
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389783913453217010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23336a3894d7f4a498a35a2e3b33a74d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

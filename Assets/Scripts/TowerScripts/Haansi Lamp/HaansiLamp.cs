@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class HaansiLamp : MonoBehaviour
 {
-    [SerializeField] private Transform hidden_entity;
-    [SerializeField] private Transform entity;
     [SerializeField] private float range = 8f;
     [SerializeField] private float rotSpeed = 5f;
     [SerializeField] private LineRenderer lineRenderer;
@@ -22,23 +20,28 @@ public class HaansiLamp : MonoBehaviour
     private int zapsShot = 0;
 
 
-    void FindEntities()
+    Transform FindTarget()
     {
-        if (hidden_entity == null)
-        {
-            GameObject hidden = GameObject.FindGameObjectWithTag("HiddenEntity");
+        GameObject[] hiddenEntities = GameObject.FindGameObjectsWithTag("HiddenEntity");
 
-            if (hidden != null)
-                hidden_entity = hidden.transform;
+        foreach (GameObject hidden in hiddenEntities)
+        {
+            if (Vector2.Distance(transform.position, hidden.transform.position) <= range)
+            {
+                return hidden.transform;
+            }
         }
 
-        if (entity == null)
-        {
-            GameObject normal = GameObject.FindGameObjectWithTag("Entity");
+        GameObject[] entities = GameObject.FindGameObjectsWithTag("Entity");
 
-            if (normal != null)
-                entity = normal.transform;
+        foreach (GameObject normal in entities)
+        {
+            if (Vector2.Distance(transform.position, normal.transform.position) <= range)
+            {
+                return normal.transform;
+            }
         }
+        return null;
     }
 
     void Awake()
@@ -48,22 +51,15 @@ public class HaansiLamp : MonoBehaviour
 
     void Update()
     {
-        FindEntities();
         DrawSightLine();
-        Transform target = null;
-
-
-        if (hidden_entity != null && Vector2.Distance(transform.position, hidden_entity.position) <= range)
-        {
-            target = hidden_entity;
-        }
-        else if (entity != null && Vector2.Distance(transform.position, entity.position) <= range)
-        {
-            target = entity;
-        }
+        Transform target = FindTarget();
 
         if (target == null)
+        {
+            zapsShot = 0;
+            nextZapTime = 0f;
             return;
+        }
 
         Vector2 direction = (Vector2)target.position - (Vector2)transform.position;
 

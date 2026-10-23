@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Blobify : MonoBehaviour
 {
-    [SerializeField] private Transform entity;
     [SerializeField] private float radius = 4f;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int circlePoints = 14;
@@ -17,19 +16,21 @@ public class Blobify : MonoBehaviour
 
     private SpriteRenderer spriteRenderer; 
     public float NoteLifetime = 0.5f;
-    private bool entityInRadius;
     private float nextNoteTime = 0f;
     private int notesShot = 0;
 
-    void FindEntities()
+    Transform FindTarget()
     {
-        if (entity == null)
-        {
-            GameObject normal = GameObject.FindGameObjectWithTag("Entity");
+        GameObject[] entities = GameObject.FindGameObjectsWithTag("Entity");
 
-            if (normal != null)
-                entity = normal.transform;
+        foreach (GameObject normal in entities)
+        {
+            if (Vector2.Distance(transform.position, normal.transform.position) <= radius)
+            {
+                return normal.transform;
+            }
         }
+        return null;
     }
 
     void Awake()
@@ -39,16 +40,19 @@ public class Blobify : MonoBehaviour
 
     void Update()
     {
-        FindEntities();
-        if (entity == null) return;
-
         DrawSightLine();
+        Transform target = FindTarget();
 
-        bool inRadius = IsEntityInRadius();
-
-        if (inRadius && Time.time > nextNoteTime)
+        if (target == null)
         {
-            burst();
+            notesShot = 0;
+            nextNoteTime = 0f;
+            return;
+        }
+
+        if (Time.time > nextNoteTime)
+        {
+            burst(target);
             notesShot++;
 
             if(notesShot >= NotePerBurst)
@@ -63,13 +67,7 @@ public class Blobify : MonoBehaviour
         }
     }
 
-    bool IsEntityInRadius()
-    {
-        float distance = Vector2.Distance(transform.position, entity.position);
-        return distance <= radius;
-    }
-
-    public void burst()
+    public void burst(Transform target)
     {
         float angleStep = 360f / NoteCount;
         float angle = 0f;
@@ -82,7 +80,7 @@ public class Blobify : MonoBehaviour
             Vector2 direction = new Vector2(projectileDirXPosition, projectileDirYposition) - new Vector2(transform.position.x, transform.position.y);
 
             GameObject note = Instantiate(musicnotePrefab, transform.position, Quaternion.identity);
-            note.GetComponent<MusicNoteProjectile>().LaunchNoteDirection(direction, speed, entity);
+            note.GetComponent<MusicNoteProjectile>().LaunchNoteDirection(direction, speed, target);
             Destroy(note, NoteLifetime);
 
             angle += angleStep;

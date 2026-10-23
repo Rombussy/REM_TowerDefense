@@ -11,9 +11,8 @@ public class EntityHP : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage()
     {
-        currentHealth -= damage;
         if (currentHealth <= 0)
         {
             Die();
