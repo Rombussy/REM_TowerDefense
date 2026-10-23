@@ -18,8 +18,20 @@ public class Blobify : MonoBehaviour
     private float nextNoteTime = 0f;
     private int notesShot = 0;
 
+    void FindEntities()
+    {
+        if (entity == null)
+        {
+            GameObject normal = GameObject.FindGameObjectWithTag("Entity");
+
+            if (normal != null)
+                entity = normal.transform;
+        }
+    }
+
     void Update()
     {
+        FindEntities();
         if (entity == null) return;
 
         DrawSightLine();

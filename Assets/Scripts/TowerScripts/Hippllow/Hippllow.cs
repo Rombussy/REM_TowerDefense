@@ -16,8 +16,20 @@ public class Hippllow : MonoBehaviour
     private float nextFeatherTime = 0f;
     private int feathersShot = 0;
 
+    void FindEntities()
+    {
+        if (entity == null)
+        {
+            GameObject normal = GameObject.FindGameObjectWithTag("Entity");
+
+            if (normal != null)
+                entity = normal.transform;
+        }
+    }
+
     void Update()
     {
+        FindEntities();
         if (entity == null) return;
 
         DrawSightLine();

@@ -18,18 +18,38 @@ public class HaansiLamp : MonoBehaviour
     private float nextZapTime = 0f;
     private int zapsShot = 0;
 
+
+    void FindEntities()
+    {
+        if (hidden_entity == null)
+        {
+            GameObject hidden = GameObject.FindGameObjectWithTag("HiddenEntity");
+
+            if (hidden != null)
+                hidden_entity = hidden.transform;
+        }
+
+        if (entity == null)
+        {
+            GameObject normal = GameObject.FindGameObjectWithTag("Entity");
+
+            if (normal != null)
+                entity = normal.transform;
+        }
+    }
+
     void Update()
     {
+        FindEntities();
         DrawSightLine();
         Transform target = null;
 
-        if (hidden_entity != null &&
-            Vector2.Distance(transform.position, hidden_entity.position) <= range)
+
+        if (hidden_entity != null && Vector2.Distance(transform.position, hidden_entity.position) <= range)
         {
             target = hidden_entity;
         }
-        else if (entity != null &&
-                 Vector2.Distance(transform.position, entity.position) <= range)
+        else if (entity != null && Vector2.Distance(transform.position, entity.position) <= range)
         {
             target = entity;
         }
