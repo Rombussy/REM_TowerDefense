@@ -7,7 +7,7 @@ public class EntityStatsManager : MonoBehaviour
     private int currentHealth;
     private void OnEnable()
     {
-        currentHealth -= maxHealth;
+        currentHealth = maxHealth;
     }
     public void damageEntity(int damage)
     {
@@ -17,7 +17,7 @@ public class EntityStatsManager : MonoBehaviour
             EnemyDie();
         }
     }
-      private void EnemyDie()
+    public void EnemyDie()
     {
         gameObject.SetActive(false);
     }
