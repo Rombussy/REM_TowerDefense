@@ -10,10 +10,13 @@ public class Blobify : MonoBehaviour
     [SerializeField] private float speed = 10f;
     [SerializeField] private GameObject musicnotePrefab;
     [SerializeField] private int NoteCount = 5;
-    public float NoteLifetime = 0.5f;
+    [SerializeField] private float NoteInterval = 0.3f;
+    [SerializeField] private float NotePerBurst = 1f;
 
+    public float NoteLifetime = 0.5f;
     private bool entityInRadius;
     private float nextNoteTime = 0f;
+    private int notesShot = 0;
 
     void Update()
     {
@@ -23,10 +26,20 @@ public class Blobify : MonoBehaviour
 
         bool inRadius = IsEntityInRadius();
 
-        if (inRadius && !entityInRadius && Time.time > nextNoteTime)
+        if (inRadius && Time.time > nextNoteTime)
         {
             burst();
-            nextNoteTime = Time.time + NoteSpawnrate;
+            notesShot++;
+
+            if(notesShot >= NotePerBurst)
+            {
+                notesShot = 0;
+                nextNoteTime = Time.time + NoteSpawnrate;
+            }
+            else
+            {
+                nextNoteTime = Time.time + NoteInterval;
+            }
         }
     }
 
@@ -56,14 +69,24 @@ public class Blobify : MonoBehaviour
         }
     }
 
-    public void Upgrade2()
+    public void Upgrade2_Blobify()
     {
-        if (NoteCount < 6)
+            NoteCount++;
+            radius += 1f;
+            NoteSpawnrate += 1.1f;
+            NoteLifetime += 0.1f;
+            NotePerBurst += 1f;
+    }
+
+    public void Upgrade3_Blobify()
+    {
+        if (NoteCount < 8)
         {
             NoteCount++;
             radius += 1f;
             NoteSpawnrate += 1.1f;
             NoteLifetime += 0.1f;
+            NotePerBurst += 1f;
         }
     }
 

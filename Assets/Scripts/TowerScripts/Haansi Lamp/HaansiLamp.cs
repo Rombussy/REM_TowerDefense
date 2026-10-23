@@ -1,9 +1,9 @@
-
 using UnityEngine;
 
 public class HaansiLamp : MonoBehaviour
 {
     [SerializeField] private Transform hidden_entity;
+    [SerializeField] private Transform entity;
     [SerializeField] private float range = 8f;
     [SerializeField] private float rotSpeed = 5f;
     [SerializeField] private LineRenderer lineRenderer;
@@ -11,20 +11,33 @@ public class HaansiLamp : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float radius = 4f;
     [SerializeField] private int circlePoints = 14;
+    [SerializeField] private float ZapPerBurst = 1f;
+    [SerializeField] private float ZapInterval = 0.3f;
 
     public float zapRate = 1f;
     private float nextZapTime = 0f;
+    private int zapsShot = 0;
 
     void Update()
     {
-        if (hidden_entity == null) return;
-
         DrawSightLine();
+        Transform target = null;
 
-        Vector2 direction = (Vector2)hidden_entity.position - (Vector2)transform.position;
+        if (hidden_entity != null &&
+            Vector2.Distance(transform.position, hidden_entity.position) <= range)
+        {
+            target = hidden_entity;
+        }
+        else if (entity != null &&
+                 Vector2.Distance(transform.position, entity.position) <= range)
+        {
+            target = entity;
+        }
 
-        if (direction.magnitude > range)
+        if (target == null)
             return;
+
+        Vector2 direction = (Vector2)target.position - (Vector2)transform.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
@@ -33,14 +46,24 @@ public class HaansiLamp : MonoBehaviour
 
         if (Time.time >= nextZapTime)
         {
-            Shoot();
-            nextZapTime = Time.time + zapRate;
+            Shoot(target);
+            zapsShot++;
+
+            if (zapsShot >= ZapPerBurst)
+            {
+                zapsShot = 0;
+                nextZapTime = Time.time + zapRate;
+            }
+            else
+            {
+                nextZapTime = Time.time + ZapInterval;
+            }
         }
     }
 
-    void Shoot()
+    void Shoot(Transform target)
     {
-        if (zapPrefab == null || firePoint == null)
+        if (zapPrefab == null || firePoint == null || target == null)
             return;
 
         GameObject zap = Instantiate(zapPrefab, firePoint.position, firePoint.rotation);
@@ -48,13 +71,30 @@ public class HaansiLamp : MonoBehaviour
 
         if (projectile != null)
         {
-            projectile.SetTarget(hidden_entity);
+            projectile.SetTarget(target);
         }
+    }
+
+    public void Upgrade2_HaansiLamp()
+    {
+        range += 0.5f;
+        zapRate -= 0.2f;
+        radius += 0.5f;
+        ZapPerBurst += 1f;
+    }
+
+    public void Upgrade3_HaansiLamp()
+    {
+        range += 0.5f;
+        zapRate -= 0.2f;
+        radius += 0.5f;
+        ZapPerBurst += 1f;
     }
 
     void DrawSightLine()
     {
-        if (lineRenderer == null || circlePoints < 1) return;
+        if (lineRenderer == null || circlePoints < 1)
+            return;
 
         lineRenderer.positionCount = circlePoints + 1;
         Vector3 center = transform.position;

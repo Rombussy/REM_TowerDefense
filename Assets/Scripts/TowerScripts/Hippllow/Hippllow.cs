@@ -8,10 +8,13 @@ public class Hippllow : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private int circlePoints = 14;
-    [SerializeField] private float FeatherSpawnrate = 1.4f; 
+    [SerializeField] private float FeatherSpawnrate = 1.4f;
+    [SerializeField] private float FeatherPerBurst = 1f;
+    [SerializeField] private float FeatherInterval = 0.3f;
 
     private bool entityInRadius;
     private float nextFeatherTime = 0f;
+    private int feathersShot = 0;
 
     void Update()
     {
@@ -21,10 +24,20 @@ public class Hippllow : MonoBehaviour
 
         bool inRadius = IsEntityInRadius();
 
-        if (inRadius && !entityInRadius && Time.time > nextFeatherTime)
+        if (inRadius && Time.time > nextFeatherTime)
         {
             Shoot();
-            nextFeatherTime = Time.time + FeatherSpawnrate;
+            feathersShot++;
+            
+            if (feathersShot >= FeatherPerBurst)
+            {
+                feathersShot = 0;
+                nextFeatherTime = Time.time + FeatherSpawnrate;
+            }
+            else
+            {
+                nextFeatherTime = Time.time + FeatherInterval;
+            }
         }
 
         entityInRadius = inRadius;
@@ -49,6 +62,20 @@ public class Hippllow : MonoBehaviour
         {
             projectile.SetTarget(entity);
         }
+    }
+
+    public void Upgrade2_Hippllow()
+    {
+        FeatherPerBurst += 1f;
+        radius += 1f;
+        FeatherSpawnrate -= 0.2f;
+    }
+
+    public void Upgrade3_Hippllow()
+    {
+        FeatherPerBurst += 1f;
+        radius += 1f;
+        FeatherSpawnrate -= 0.2f;
     }
 
     void DrawSightLine()

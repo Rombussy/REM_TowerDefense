@@ -336,13 +336,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HaansiLamp
   hidden_entity: {fileID: 2049487619}
-  range: 3
+  entity: {fileID: 1914673480}
+  range: 2
   rotSpeed: 5
   lineRenderer: {fileID: 178474096}
   zapPrefab: {fileID: 671556052798433118, guid: e8994af90581f9c4ab163963ed41af1e, type: 3}
   firePoint: {fileID: 178474095}
   radius: 2
   circlePoints: 14
+  ZapPerBurst: 1
+  ZapInterval: 0.3
   zapRate: 1.5
 --- !u!114 &178474098
 MonoBehaviour:
@@ -573,6 +576,8 @@ MonoBehaviour:
   lineRenderer: {fileID: 219700905}
   circlePoints: 14
   FeatherSpawnrate: 1.4
+  FeatherPerBurst: 1
+  FeatherInterval: 0.3
 --- !u!120 &219700905
 LineRenderer:
   serializedVersion: 3
@@ -778,7 +783,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 381628745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 219700904}
+        m_TargetAssemblyTypeName: Hippllow, Assembly-CSharp
+        m_MethodName: Upgrade3_Hippllow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1270837653}
+        m_TargetAssemblyTypeName: Blobify, Assembly-CSharp
+        m_MethodName: Upgrade3_Blobify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 178474097}
+        m_TargetAssemblyTypeName: HaansiLamp, Assembly-CSharp
+        m_MethodName: Upgrade3_HaansiLamp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &381628745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,6 +1326,8 @@ MonoBehaviour:
   speed: 10
   musicnotePrefab: {fileID: 6693363585501422643, guid: 1c865b9882eadc840a229e90850f1345, type: 3}
   NoteCount: 5
+  NoteInterval: 0.3
+  NotePerBurst: 1
   NoteLifetime: 0.2
 --- !u!120 &1270837654
 LineRenderer:
@@ -1711,7 +1754,31 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1270837653}
         m_TargetAssemblyTypeName: Blobify, Assembly-CSharp
-        m_MethodName: Upgrade2
+        m_MethodName: Upgrade2_Blobify
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 219700904}
+        m_TargetAssemblyTypeName: Hippllow, Assembly-CSharp
+        m_MethodName: Upgrade2_Hippllow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 178474097}
+        m_TargetAssemblyTypeName: HaansiLamp, Assembly-CSharp
+        m_MethodName: Upgrade2_HaansiLamp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
