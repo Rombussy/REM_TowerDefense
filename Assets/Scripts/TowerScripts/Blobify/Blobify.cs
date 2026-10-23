@@ -15,7 +15,8 @@ public class Blobify : MonoBehaviour
     [SerializeField] private Sprite upgrade2;
     [SerializeField] private Sprite upgrade3;
 
-    private SpriteRenderer spriteRenderer; public float NoteLifetime = 0.5f;
+    private SpriteRenderer spriteRenderer; 
+    public float NoteLifetime = 0.5f;
     private bool entityInRadius;
     private float nextNoteTime = 0f;
     private int notesShot = 0;

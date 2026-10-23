@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a28db40c105dd74f8ad637e498afd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blobify
-  entity: {fileID: 4667549318806414012, guid: d825984c9bbe25140a3daf5a4961cbd9, type: 3}
+  entity: {fileID: 0}
   radius: 2
   lineRenderer: {fileID: 217631342061468791}
   circlePoints: 14
