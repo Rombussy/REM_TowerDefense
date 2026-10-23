@@ -4,6 +4,7 @@ public class FeatherProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifetime = 5f;
+    private EntityHP entityHp;
     private Vector3 startPosition;
     private Vector3 direction;
     private float ProjectileDistance = 0.5f;
@@ -12,6 +13,7 @@ public class FeatherProjectile : MonoBehaviour
 
     void Start()
     {
+        entityHp = FindFirstObjectByType<EntityHP>();
         startPosition = transform.position;
         direction = transform.right;
         Destroy(gameObject, lifetime);
@@ -30,6 +32,7 @@ public class FeatherProjectile : MonoBehaviour
         if (direction.magnitude <= ProjectileDistance)
         {
             Destroy(gameObject);
+            entityHp.TakeDamage(entityHp.dmg);
         }
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

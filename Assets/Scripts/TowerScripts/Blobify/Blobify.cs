@@ -62,7 +62,7 @@ public class Blobify : MonoBehaviour
             Vector2 direction = new Vector2(projectileDirXPosition, projectileDirYposition) - new Vector2(transform.position.x, transform.position.y);
 
             GameObject note = Instantiate(musicnotePrefab, transform.position, Quaternion.identity);
-            note.GetComponent<MusicNoteProjectile>().LaunchNoteDirection(direction, speed);
+            note.GetComponent<MusicNoteProjectile>().LaunchNoteDirection(direction, speed, entity);
             Destroy(note, NoteLifetime);
 
             angle += angleStep;
