@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Hippllow : MonoBehaviour
 {
-    [SerializeField] private Transform entity;
     [SerializeField] private float radius = 4f;
     [SerializeField] private GameObject featherPrefab;
     [SerializeField] private Transform firePoint;
@@ -15,19 +14,21 @@ public class Hippllow : MonoBehaviour
     [SerializeField] private Sprite upgrade3;
 
     private SpriteRenderer spriteRenderer;
-    private bool entityInRadius;
     private float nextFeatherTime = 0f;
     private int feathersShot = 0;
 
-    void FindEntities()
+    Transform FindTarget()
     {
-        if (entity == null)
-        {
-            GameObject normal = GameObject.FindGameObjectWithTag("Entity");
+        GameObject[] entities = GameObject.FindGameObjectsWithTag("Entity");
 
-            if (normal != null)
-                entity = normal.transform;
+        foreach (GameObject normal in entities)
+        {
+            if (Vector2.Distance(transform.position, normal.transform.position) <= radius)
+            {
+                return normal.transform;
+            }
         }
+        return null;
     }
 
     void Awake()
@@ -37,16 +38,19 @@ public class Hippllow : MonoBehaviour
 
     void Update()
     {
-        FindEntities();
-        if (entity == null) return;
-
         DrawSightLine();
+        Transform target = FindTarget();
 
-        bool inRadius = IsEntityInRadius();
-
-        if (inRadius && Time.time > nextFeatherTime)
+        if (target == null)
         {
-            Shoot();
+            feathersShot = 0;
+            nextFeatherTime = 0f;
+            return;
+        }
+
+        if (Time.time > nextFeatherTime)
+        {
+            Shoot(target);
             feathersShot++;
             
             if (feathersShot >= FeatherPerBurst)
@@ -59,17 +63,9 @@ public class Hippllow : MonoBehaviour
                 nextFeatherTime = Time.time + FeatherInterval;
             }
         }
-
-        entityInRadius = inRadius;
     }
 
-    bool IsEntityInRadius()
-    { 
-        float distance = Vector2.Distance(transform.position,entity.position);
-        return distance <= radius;
-    }
-
-    void Shoot()
+    void Shoot(Transform target)
     {
         if (featherPrefab == null || firePoint == null)
             return;
@@ -80,7 +76,7 @@ public class Hippllow : MonoBehaviour
 
         if (projectile != null)
         {
-            projectile.SetTarget(entity);
+            projectile.SetTarget(target);
         }
     }
 
