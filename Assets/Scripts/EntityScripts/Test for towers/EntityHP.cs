@@ -2,25 +2,26 @@ using UnityEngine;
 
 public class EntityHP : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    public float currentHealth = 100f;
-    public float dmg = 50f;
+    public float maxHealth = 1f;
+    public float currentHealth;
+    public bool isStealth = false;
 
-    void Start()
+    private void OnEnable()
     {
         currentHealth = maxHealth;
-    }
-
-    void Update()
-    {
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
