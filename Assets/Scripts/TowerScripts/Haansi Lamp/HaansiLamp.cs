@@ -1,5 +1,16 @@
 using UnityEngine;
 
+[System.Serializable]
+public class HaansiLampUpgrade
+{
+    public float rangeIncrease;
+    public float zapRateDecrease;
+    public float radiusIncrease;
+    public float zapPerBurstIncrease;
+    public Sprite upgradeSprite;
+    public int price;
+}
+
 public class HaansiLamp : MonoBehaviour
 {
     [SerializeField] private float range = 8f;
@@ -13,7 +24,9 @@ public class HaansiLamp : MonoBehaviour
     [SerializeField] private float ZapInterval = 0.3f;
     [SerializeField] private Sprite upgrade2;
     [SerializeField] private Sprite upgrade3;
-
+    public HaansiLampUpgrade[] upgrades;
+    public int upgradeLevel = 0;
+    public GameObject towerUpgradePreFab;
     private SpriteRenderer spriteRenderer;
     public float zapRate = 1f;
     private float nextZapTime = 0f;
