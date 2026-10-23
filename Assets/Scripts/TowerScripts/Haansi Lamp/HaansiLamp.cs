@@ -13,7 +13,10 @@ public class HaansiLamp : MonoBehaviour
     [SerializeField] private int circlePoints = 14;
     [SerializeField] private float ZapPerBurst = 1f;
     [SerializeField] private float ZapInterval = 0.3f;
+    [SerializeField] private Sprite upgrade2;
+    [SerializeField] private Sprite upgrade3;
 
+    private SpriteRenderer spriteRenderer;
     public float zapRate = 1f;
     private float nextZapTime = 0f;
     private int zapsShot = 0;
@@ -36,6 +39,11 @@ public class HaansiLamp : MonoBehaviour
             if (normal != null)
                 entity = normal.transform;
         }
+    }
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -101,6 +109,7 @@ public class HaansiLamp : MonoBehaviour
         zapRate -= 0.2f;
         radius += 0.5f;
         ZapPerBurst += 1f;
+        spriteRenderer.sprite = upgrade2;
     }
 
     public void Upgrade3_HaansiLamp()
@@ -109,6 +118,7 @@ public class HaansiLamp : MonoBehaviour
         zapRate -= 0.2f;
         radius += 0.5f;
         ZapPerBurst += 1f;
+        spriteRenderer.sprite = upgrade3;
     }
 
     void DrawSightLine()

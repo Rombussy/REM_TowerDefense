@@ -115,6 +115,8 @@ MonoBehaviour:
   NoteCount: 5
   NoteInterval: 0.3
   NotePerBurst: 1
+  upgrade2: {fileID: -9149549653936920044, guid: 06563a684f415fe4a94691d9c4e4b926, type: 3}
+  upgrade3: {fileID: 3959410375003207483, guid: 75dd68839c88899448a2bb380b69d9ae, type: 3}
   NoteLifetime: 0.2
 --- !u!120 &217631342061468791
 LineRenderer:
