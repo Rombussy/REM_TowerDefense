@@ -3,9 +3,11 @@ using System.Collections;
 
 public class EntityMovementManager : MonoBehaviour
 {
+    public int damageToPlayer = 10;
     public float _entitySpeed = 3f;
     private BezierSegment[] pathSegments;
     private int segmentIndex = 0;
+    
 
     public void Initialize(BezierSegment[] segments)
     {
@@ -45,6 +47,10 @@ public class EntityMovementManager : MonoBehaviour
 
     private void EndPoint()
     {
+        if (PlayerStat.Instance != null)
+        {
+            PlayerStat.Instance.TakeDamage(damageToPlayer);
+        }
         gameObject.SetActive(false);
     }
 }   

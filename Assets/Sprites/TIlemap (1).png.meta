@@ -1,0 +1,1349 @@
+fileFormatVersion: 2
+guid: cccb0f08aa2d4b64c967c88cc7d9873d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1867964243919120361
+    second: TIlemap (1)_0
+  - first:
+      213: 309477843786197169
+    second: TIlemap (1)_1
+  - first:
+      213: -5024999797966950433
+    second: TIlemap (1)_2
+  - first:
+      213: -5946231697618270095
+    second: TIlemap (1)_3
+  - first:
+      213: 6793425095288062504
+    second: TIlemap (1)_4
+  - first:
+      213: -2951358634371254745
+    second: TIlemap (1)_5
+  - first:
+      213: 2158519090859572894
+    second: TIlemap (1)_6
+  - first:
+      213: -2825501265140200089
+    second: TIlemap (1)_7
+  - first:
+      213: 984336413701991858
+    second: TIlemap (1)_8
+  - first:
+      213: -7287069849112856571
+    second: TIlemap (1)_9
+  - first:
+      213: -7324775822394668282
+    second: TIlemap (1)_10
+  - first:
+      213: 3309794433173392667
+    second: TIlemap (1)_11
+  - first:
+      213: 8097113715544852415
+    second: TIlemap (1)_12
+  - first:
+      213: -6974568134954417767
+    second: TIlemap (1)_13
+  - first:
+      213: -2392107276527550217
+    second: TIlemap (1)_14
+  - first:
+      213: 5520097079147823775
+    second: TIlemap (1)_15
+  - first:
+      213: -709019314922030231
+    second: TIlemap (1)_16
+  - first:
+      213: 5283387743747072910
+    second: TIlemap (1)_17
+  - first:
+      213: 6850443121165659852
+    second: TIlemap (1)_18
+  - first:
+      213: 2262677792283264912
+    second: TIlemap (1)_19
+  - first:
+      213: 8261232893633959705
+    second: TIlemap (1)_20
+  - first:
+      213: 8061497287477749341
+    second: TIlemap (1)_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 19
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TIlemap (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718d114ca68a316e0800000000000000
+      internalID: -1867964243919120361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8eab0957c7b4400800000000000000
+      internalID: 309477843786197169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf25cdae4d934ab0800000000000000
+      internalID: -5024999797966950433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1788b4786cdba7da0800000000000000
+      internalID: -5946231697618270095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8228edc8128174e50800000000000000
+      internalID: 6793425095288062504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726f48185faaa07d0800000000000000
+      internalID: -2951358634371254745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 279
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e75934da994fd10800000000000000
+      internalID: 2158519090859572894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76dc6eac19dc9c8d0800000000000000
+      internalID: -2825501265140200089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd6036c0c019ad00800000000000000
+      internalID: 984336413701991858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5083b2ea4902fda90800000000000000
+      internalID: -7287069849112856571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bcbc6a23b295a90800000000000000
+      internalID: -7324775822394668282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d8ddc3080ceed20800000000000000
+      internalID: 3309794433173392667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_12
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb78ef0260abe5070800000000000000
+      internalID: 8097113715544852415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_13
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 260
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991884eeb3b553f90800000000000000
+      internalID: -6974568134954417767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0c2fd1b178dced0800000000000000
+      internalID: -2392107276527550217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f920748fb035b9c40800000000000000
+      internalID: 5520097079147823775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_16
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b7e2b80be0926f0800000000000000
+      internalID: -709019314922030231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8362bc092d525940800000000000000
+      internalID: 5283387743747072910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_18
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccee81739b9a11f50800000000000000
+      internalID: 6850443121165659852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_19
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0978532c675a66f10800000000000000
+      internalID: 2262677792283264912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_20
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91713dffb8bc5a270800000000000000
+      internalID: 8261232893633959705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 241
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56e2e1421130ef60800000000000000
+      internalID: 8061497287477749341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6811de3c84e2254c8693325a114029c
+      internalID: -255818346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_23
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72516a1e774d8cd499160cb39f499852
+      internalID: 964153656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_24
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e681f6c5b6ee04c96ec2d5cb3afcec
+      internalID: -769913887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c694eff60f2524e8535fcd390831a0
+      internalID: -2060917286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_26
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff951495aa513114bbb016358ad5dfcf
+      internalID: -1407225970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_27
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e629bb432783ac24e8b03ad1fcb73984
+      internalID: 1550695837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_28
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d58ee86df9602843924c6c5f2999e14
+      internalID: -924348168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6e7ac36d263824bb172340b2787301
+      internalID: 1942755433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_30
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf781dcbbfbc9334e807ddccc2852f23
+      internalID: -585870163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_31
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaaddbf4043dfbb4d91e8f158e65952e
+      internalID: 860009295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_33
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 203
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81262329572dd5741a992497ac654c4f
+      internalID: 119410146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_34
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 203
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71de3bc7a321da448e0b5b90db95bda
+      internalID: 283235242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_35
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 203
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b71f8bd43ddeaa439e13c5534a47638
+      internalID: -884488462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_36
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 203
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4574dee70e86fa43a07017a366b782e
+      internalID: 986082386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_40
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 184
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0de42378c0f6cc42aa1defc1adb1884
+      internalID: 2054662997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_41
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 184
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8ebac2777cc7f429e6d0339df64987
+      internalID: 1792323987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_69
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 68
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e01d2b6f47a5d41bc42d9c864afb10
+      internalID: 643862676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_71
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 68
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b1e631ffe3c9b4ea5612420dbcbef5
+      internalID: 2002993704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_72
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 68
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cec825196496f4a887acc420d906a6
+      internalID: -568666448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_78
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 48
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326324c9410461e43b8a97a1edab01c8
+      internalID: 824514794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_79
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 48
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7b438d26cc828479e584b26311ed21
+      internalID: 1769365067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_81
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 48
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae04d574ee48934c893ab39dc635530
+      internalID: -1576107781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_87
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 28
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634018dc58508a749ae1205d5eb70f90
+      internalID: -1570782917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_88
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 28
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e24a17f46d5634ea586d6cacd1bfe2
+      internalID: 1904205108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TIlemap (1)_89
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 28
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd194fc35db26ad4f92328dda74bc4d3
+      internalID: 1791098983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: be46efff5e8d2c947bb07cc4d1e39fc6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":19.0,"y":19.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      TIlemap (1)_0: -1867964243919120361
+      TIlemap (1)_1: 309477843786197169
+      TIlemap (1)_10: -7324775822394668282
+      TIlemap (1)_100: -1423690617
+      TIlemap (1)_101: -491860558
+      TIlemap (1)_102: 2054098636
+      TIlemap (1)_103: -1365307318
+      TIlemap (1)_11: 3309794433173392667
+      TIlemap (1)_12: 8097113715544852415
+      TIlemap (1)_13: -6974568134954417767
+      TIlemap (1)_14: -2392107276527550217
+      TIlemap (1)_15: 5520097079147823775
+      TIlemap (1)_16: -709019314922030231
+      TIlemap (1)_17: 5283387743747072910
+      TIlemap (1)_18: 6850443121165659852
+      TIlemap (1)_19: 2262677792283264912
+      TIlemap (1)_2: -5024999797966950433
+      TIlemap (1)_20: 8261232893633959705
+      TIlemap (1)_21: 8061497287477749341
+      TIlemap (1)_22: -255818346
+      TIlemap (1)_23: 964153656
+      TIlemap (1)_24: -769913887
+      TIlemap (1)_25: -2060917286
+      TIlemap (1)_26: -1407225970
+      TIlemap (1)_27: 1550695837
+      TIlemap (1)_28: -924348168
+      TIlemap (1)_29: 1942755433
+      TIlemap (1)_3: -5946231697618270095
+      TIlemap (1)_30: -585870163
+      TIlemap (1)_31: 860009295
+      TIlemap (1)_32: -787756550
+      TIlemap (1)_33: 119410146
+      TIlemap (1)_34: 283235242
+      TIlemap (1)_35: -884488462
+      TIlemap (1)_36: 986082386
+      TIlemap (1)_37: -1489902520
+      TIlemap (1)_38: 947492901
+      TIlemap (1)_39: -1958570054
+      TIlemap (1)_4: 6793425095288062504
+      TIlemap (1)_40: 2054662997
+      TIlemap (1)_41: 1792323987
+      TIlemap (1)_42: -1027627229
+      TIlemap (1)_43: -1442116937
+      TIlemap (1)_44: 599412678
+      TIlemap (1)_45: -1098715301
+      TIlemap (1)_46: -630528214
+      TIlemap (1)_47: 247731075
+      TIlemap (1)_48: 1590807471
+      TIlemap (1)_49: -682720398
+      TIlemap (1)_5: -2951358634371254745
+      TIlemap (1)_50: -128958884
+      TIlemap (1)_51: -695790349
+      TIlemap (1)_52: 893078372
+      TIlemap (1)_53: -553051950
+      TIlemap (1)_54: 1182444304
+      TIlemap (1)_55: 1189178064
+      TIlemap (1)_56: -1814992027
+      TIlemap (1)_57: -1153317249
+      TIlemap (1)_58: 959894298
+      TIlemap (1)_59: -1734743519
+      TIlemap (1)_6: 2158519090859572894
+      TIlemap (1)_60: -83496683
+      TIlemap (1)_61: 580362194
+      TIlemap (1)_62: -1975471991
+      TIlemap (1)_63: -1310004080
+      TIlemap (1)_64: -809445337
+      TIlemap (1)_65: -996612145
+      TIlemap (1)_66: -175899016
+      TIlemap (1)_67: -82165766
+      TIlemap (1)_68: -762886639
+      TIlemap (1)_69: 643862676
+      TIlemap (1)_7: -2825501265140200089
+      TIlemap (1)_70: -1879779862
+      TIlemap (1)_71: 2002993704
+      TIlemap (1)_72: -568666448
+      TIlemap (1)_73: -682612260
+      TIlemap (1)_74: 2034661410
+      TIlemap (1)_75: 1941149212
+      TIlemap (1)_76: 1124529275
+      TIlemap (1)_77: 606004008
+      TIlemap (1)_78: 824514794
+      TIlemap (1)_79: 1769365067
+      TIlemap (1)_8: 984336413701991858
+      TIlemap (1)_80: 494825034
+      TIlemap (1)_81: -1576107781
+      TIlemap (1)_82: -460754324
+      TIlemap (1)_83: -2073438412
+      TIlemap (1)_84: -1161724098
+      TIlemap (1)_85: -1912420750
+      TIlemap (1)_86: -86448034
+      TIlemap (1)_87: -1570782917
+      TIlemap (1)_88: 1904205108
+      TIlemap (1)_89: 1791098983
+      TIlemap (1)_9: -7287069849112856571
+      TIlemap (1)_90: -1102502467
+      TIlemap (1)_91: 588620831
+      TIlemap (1)_92: -847721062
+      TIlemap (1)_93: 1987233493
+      TIlemap (1)_94: -517853336
+      TIlemap (1)_95: -1016881537
+      TIlemap (1)_96: -1086287955
+      TIlemap (1)_97: 1615702030
+      TIlemap (1)_98: 6178187
+      TIlemap (1)_99: 486180630
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
