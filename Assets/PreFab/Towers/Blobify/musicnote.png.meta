@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e7fc7e6236a8647459374dc8d1ddcc27
+guid: 87227d48ab8419a408240c98b99252da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8561097740918971512
-    second: musicnote_0
+      213: -1048260999065128244
+    second: musicnote 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: musicnote_0
+      name: musicnote 1_0
       rect:
         serializedVersion: 2
         x: 5
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87cdfd669012fc670800000000000000
-      internalID: 8561097740918971512
+      spriteID: cc2b3dedc24d371f0800000000000000
+      internalID: -1048260999065128244
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      musicnote_0: 8561097740918971512
+      musicnote 1_0: -1048260999065128244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
