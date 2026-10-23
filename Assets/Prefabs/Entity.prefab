@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4667549318806414012}
   - component: {fileID: 7848207122216004176}
   - component: {fileID: 4066250370455923672}
-  - component: {fileID: -1268887071352620285}
+  - component: {fileID: -4982772960710226313}
   m_Layer: 0
   m_Name: Entity
   m_TagString: Entity
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EntityMovementManager
   damageToPlayer: 10
   _entitySpeed: 1
---- !u!114 &-1268887071352620285
+--- !u!114 &-4982772960710226313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
