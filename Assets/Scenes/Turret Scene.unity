@@ -127,17 +127,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107228466704798346, guid: 2ecb8e9b4d39bb44ebe2ed5834541a10, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6906844455997694600, guid: 1b18e6146bbfaf14c8a5a26dcc127f94, type: 3}
     - target: {fileID: 8190035354035531909, guid: 2ecb8e9b4d39bb44ebe2ed5834541a10, type: 3}
       propertyPath: m_Name
       value: HaansiLamp
       objectReference: {fileID: 0}
     - target: {fileID: 8228570862269059695, guid: 2ecb8e9b4d39bb44ebe2ed5834541a10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.727813
+      value: 5.55
       objectReference: {fileID: 0}
     - target: {fileID: 8228570862269059695, guid: 2ecb8e9b4d39bb44ebe2ed5834541a10, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.42713785
+      value: -2.98
       objectReference: {fileID: 0}
     - target: {fileID: 8228570862269059695, guid: 2ecb8e9b4d39bb44ebe2ed5834541a10, type: 3}
       propertyPath: m_LocalPosition.z
@@ -585,11 +589,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 245252271594566088, guid: 9980b7cb596a0c44da6945d6ee9d717a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.158436
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 245252271594566088, guid: 9980b7cb596a0c44da6945d6ee9d717a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9502631
+      value: 2.45
       objectReference: {fileID: 0}
     - target: {fileID: 245252271594566088, guid: 9980b7cb596a0c44da6945d6ee9d717a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -627,6 +631,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blobify
       objectReference: {fileID: 0}
+    - target: {fileID: 5581815153732489085, guid: 9980b7cb596a0c44da6945d6ee9d717a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581815153732489085, guid: 9980b7cb596a0c44da6945d6ee9d717a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581815153732489085, guid: 9980b7cb596a0c44da6945d6ee9d717a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3761446897388534399, guid: df5424372e809a84f83bf2257158de1f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -856,17 +872,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3481316757240618232, guid: 8207e87b8e02a394fa80b102d53bb643, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4531065659737155022, guid: 31a4f258620e6364d979f82eb09a7678, type: 3}
     - target: {fileID: 5611998413439896970, guid: 8207e87b8e02a394fa80b102d53bb643, type: 3}
       propertyPath: m_Name
       value: Hippllow
       objectReference: {fileID: 0}
     - target: {fileID: 5669204434339767497, guid: 8207e87b8e02a394fa80b102d53bb643, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.997529
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: 5669204434339767497, guid: 8207e87b8e02a394fa80b102d53bb643, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06751096
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 5669204434339767497, guid: 8207e87b8e02a394fa80b102d53bb643, type: 3}
       propertyPath: m_LocalPosition.z

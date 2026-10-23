@@ -11,7 +11,10 @@ public class Hippllow : MonoBehaviour
     [SerializeField] private float FeatherSpawnrate = 1.4f;
     [SerializeField] private float FeatherPerBurst = 1f;
     [SerializeField] private float FeatherInterval = 0.3f;
+    [SerializeField] private Sprite upgrade2;
+    [SerializeField] private Sprite upgrade3;
 
+    private SpriteRenderer spriteRenderer;
     private bool entityInRadius;
     private float nextFeatherTime = 0f;
     private int feathersShot = 0;
@@ -25,6 +28,11 @@ public class Hippllow : MonoBehaviour
             if (normal != null)
                 entity = normal.transform;
         }
+    }
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -81,6 +89,7 @@ public class Hippllow : MonoBehaviour
         FeatherPerBurst += 1f;
         radius += 1f;
         FeatherSpawnrate -= 0.2f;
+        spriteRenderer.sprite = upgrade2;
     }
 
     public void Upgrade3_Hippllow()
@@ -88,6 +97,7 @@ public class Hippllow : MonoBehaviour
         FeatherPerBurst += 1f;
         radius += 1f;
         FeatherSpawnrate -= 0.2f;
+        spriteRenderer.sprite = upgrade3;
     }
 
     void DrawSightLine()

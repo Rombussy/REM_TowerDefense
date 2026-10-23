@@ -12,8 +12,10 @@ public class Blobify : MonoBehaviour
     [SerializeField] private int NoteCount = 5;
     [SerializeField] private float NoteInterval = 0.3f;
     [SerializeField] private float NotePerBurst = 1f;
+    [SerializeField] private Sprite upgrade2;
+    [SerializeField] private Sprite upgrade3;
 
-    public float NoteLifetime = 0.5f;
+    private SpriteRenderer spriteRenderer; public float NoteLifetime = 0.5f;
     private bool entityInRadius;
     private float nextNoteTime = 0f;
     private int notesShot = 0;
@@ -27,6 +29,11 @@ public class Blobify : MonoBehaviour
             if (normal != null)
                 entity = normal.transform;
         }
+    }
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -83,11 +90,12 @@ public class Blobify : MonoBehaviour
 
     public void Upgrade2_Blobify()
     {
-            NoteCount++;
-            radius += 1f;
-            NoteSpawnrate += 1.1f;
-            NoteLifetime += 0.1f;
-            NotePerBurst += 1f;
+        NoteCount++;
+        radius += 1f;
+        NoteSpawnrate += 1.1f;
+        NoteLifetime += 0.1f;
+        NotePerBurst += 1f;
+        spriteRenderer.sprite = upgrade2;
     }
 
     public void Upgrade3_Blobify()
@@ -99,6 +107,7 @@ public class Blobify : MonoBehaviour
             NoteSpawnrate += 1.1f;
             NoteLifetime += 0.1f;
             NotePerBurst += 1f;
+            spriteRenderer.sprite = upgrade3;
         }
     }
 

@@ -117,6 +117,8 @@ MonoBehaviour:
   circlePoints: 14
   ZapPerBurst: 1
   ZapInterval: 0.3
+  upgrade2: {fileID: -830791812445004059, guid: 6554885ac66bdcd4a94d38ed5fb513ee, type: 3}
+  upgrade3: {fileID: -5571276209815918906, guid: 454fc15609371a241ae947e9d15a1a93, type: 3}
   zapRate: 1.5
 --- !u!120 &3250242360040592031
 LineRenderer:
