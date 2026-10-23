@@ -27,7 +27,7 @@ public class ZapProjectile : MonoBehaviour
         if (distance <= ProjectileDistance)
         {
             Destroy(gameObject);
-            entityHp.TakeDamage(entityHp.dmg);
+            entityHp.Die();
         }
         Vector3 direction = target.position - transform.position;
         transform.position += direction.normalized * speed * Time.deltaTime;

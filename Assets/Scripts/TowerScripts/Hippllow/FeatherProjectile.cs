@@ -32,7 +32,7 @@ public class FeatherProjectile : MonoBehaviour
         if (direction.magnitude <= ProjectileDistance)
         {
             Destroy(gameObject);
-            entityHp.TakeDamage(entityHp.dmg);
+            entityHp.Die();
         }
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

@@ -20,7 +20,7 @@ public class EntityHP : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         gameObject.SetActive(false);
     }

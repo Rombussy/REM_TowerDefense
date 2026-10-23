@@ -32,7 +32,7 @@ public class MusicNoteProjectile : MonoBehaviour
         {
             if (entityHp != null)
             {
-                entityHp.TakeDamage(entityHp.dmg);
+                entityHp.Die();
             }
 
             Destroy(gameObject);
