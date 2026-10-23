@@ -4,12 +4,13 @@ public class ZapProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifetime = 5f;
-
+    private EntityHP entityHp;
     private Transform target;
     private float ProjectileDistance = 0.5f;
 
     void Start()
     {
+        entityHp = FindFirstObjectByType<EntityHP>();
         Destroy(gameObject, lifetime);
     }
 
@@ -26,6 +27,7 @@ public class ZapProjectile : MonoBehaviour
         if (distance <= ProjectileDistance)
         {
             Destroy(gameObject);
+            entityHp.TakeDamage(entityHp.dmg);
         }
         Vector3 direction = target.position - transform.position;
         transform.position += direction.normalized * speed * Time.deltaTime;
