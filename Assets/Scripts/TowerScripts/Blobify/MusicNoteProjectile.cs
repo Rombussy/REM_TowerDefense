@@ -4,10 +4,9 @@ public class MusicNoteProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float hitDistance = 0.5f;
-
     private Vector3 direction;
     private Transform target;
-    private EntityHP entityHp;
+    private EntityStatsManager entityStatsManager;
 
     public void LaunchNoteDirection(Vector3 newDirection, float newSpeed, Transform newTarget)
     {
@@ -17,7 +16,7 @@ public class MusicNoteProjectile : MonoBehaviour
 
         if (target != null)
         {
-            entityHp = target.GetComponent<EntityHP>();
+            entityStatsManager = target.GetComponent<EntityStatsManager>();
         }
     }
 
@@ -25,14 +24,17 @@ public class MusicNoteProjectile : MonoBehaviour
     {
         transform.position += direction * speed * Time.deltaTime;
 
-        if (target == null)
+        if (target == null || !target.gameObject.activeInHierarchy)
+        {
+            Destroy(gameObject);
             return;
+        }
 
         if (Vector3.Distance(transform.position, target.position) <= hitDistance)
         {
-            if (entityHp != null)
+            if (entityStatsManager != null)
             {
-                entityHp.Die();
+                entityStatsManager.damageEntity(2);
             }
 
             Destroy(gameObject);
