@@ -2,8 +2,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class TowerUpgradeUI : MonoBehaviour
+public class TowerUpgradeUIBlobify : MonoBehaviour
 {
+    public static TowerUpgradeUIBlobify currentPanel;
     public Blobify blobify;
     public Button upgradeButton;
     public TextMeshProUGUI upgradeButtonText;
@@ -11,40 +12,70 @@ public class TowerUpgradeUI : MonoBehaviour
     public int upgrade2Price = 1;
     public int upgrade3Price = 2;
     public GameObject upgradePanel;
-    public static TowerUpgradeUI Instance;
     private bool justOpened = true;
 
     private void Awake()
     {
-        Instance = this;
+        if (blobify == null)
+        {
+            blobify = GetComponent<Blobify>();
+            if (blobify == null )
+            {
+                blobify = GetComponentInParent<Blobify>();
+            }     
+        }
 
         if (upgradeButton != null)
         {
             upgradeButton.onClick.AddListener(TryUpgrade);
         }
 
-        upgradePanel.SetActive(false);
+        if (upgradePanel != null)
+        {
+            upgradePanel.SetActive(false);
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        OpenForTower(gameObject);
     }
 
     public void OpenForTower(GameObject selectedTower)
     {
         Blobify selectedBlobify = selectedTower.GetComponent<Blobify>();
 
+
         if (selectedBlobify == null)
             return;
 
+        if (currentPanel != null && currentPanel != this)
+        {
+            currentPanel.ClosePanel();
+        }
+        currentPanel = this;
         blobify = selectedBlobify;
-
-        upgradePanel.SetActive(true);
         justOpened = true;
+
+        if (upgradePanel != null)
+        {
+            upgradePanel.SetActive(true);
+        }
 
         UpdatePrice();
     }
 
     public void ClosePanel()
     {
-        upgradePanel.SetActive(false);
-        blobify = null;
+        if (upgradePanel != null)
+        {
+            upgradePanel.SetActive(false);
+        }
+
+        if (currentPanel == this)
+        {
+            currentPanel = null;
+        }  
     }
 
     public void TryUpgrade()
@@ -91,7 +122,7 @@ public class TowerUpgradeUI : MonoBehaviour
 
     private void Update()
     {
-        if (!upgradePanel.activeSelf)
+        if (upgradePanel == null ||!upgradePanel.activeSelf)
             return;
 
         if (justOpened)
@@ -127,10 +158,6 @@ public class TowerUpgradeUI : MonoBehaviour
         {
             priceText.text = "MAX";
         }   
-
-        int price = blobify.upgradeLevel == 0
-            ? upgrade2Price
-            : upgrade3Price;
     }
 
     private void OnDestroy()

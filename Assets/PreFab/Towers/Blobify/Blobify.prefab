@@ -392,7 +392,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6247429751533741032}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TowerUpgradeUI, Assembly-CSharp
         m_MethodName: TryUpgrade
         m_Mode: 1
@@ -418,7 +418,6 @@ GameObject:
   - component: {fileID: 217631342061468791}
   - component: {fileID: 6247429751533741032}
   - component: {fileID: 4389562433532987414}
-  - component: {fileID: 5151459169340950378}
   m_Layer: 0
   m_Name: Blobify
   m_TagString: Untagged
@@ -701,18 +700,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &5151459169340950378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708077117861852200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7336aa3eb9e95404eb4d1ebd909d66fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnClickUpgrade
 --- !u!1 &5346103706440529790
 GameObject:
   m_ObjectHideFlags: 0
