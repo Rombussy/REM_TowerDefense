@@ -1,11 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStat : MonoBehaviour
 {
     public static PlayerStat Instance;
 
-    public int maxHealth = 100;
-    public int currentHealth;
+    public Slider healthSlider;
+    public Slider easeSlider;
+
+    public float maxHealth = 100f;
+    public float currentHealth;
+    public float ghostBarDelayDuration = 0.04f;
+    public float ghostBarEaseDuration = 0.05f;
+
+    private float timer = 0f;
+    private float startingGhostValue;
+    private bool isEasing = false;
 
     private void Awake()
     {
@@ -21,15 +31,57 @@ public class PlayerStat : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damage)
+    private void Start()
     {
-        currentHealth -= damage;
-        Debug.Log($"sIR BENN took {damage} damage Current Health: {currentHealth}");
-
-        if (currentHealth <= 0)
+        if (healthSlider != null && easeSlider != null)
         {
-            currentHealth = 0;
-            Debug.Log("Aww loser");
+            healthSlider.maxValue = maxHealth;
+            easeSlider.maxValue = maxHealth;
+
+            healthSlider.value = currentHealth;
+            easeSlider.value = currentHealth;
+        }
+    }
+
+    private void Update()
+    {
+        if (healthSlider != null && healthSlider.value != currentHealth)
+        {
+         healthSlider.value = currentHealth;
+        }
+
+        if (isEasing && easeSlider != null)
+        {
+            timer += Time.deltaTime;
+            if (timer < ghostBarDelayDuration) return;
+
+            float progress = (timer - ghostBarDelayDuration) / ghostBarEaseDuration;
+            float easedT = Ease.EaseOutQuad(progress);
+
+            easeSlider.value = Mathf.Lerp(startingGhostValue, currentHealth, easedT);
+
+            if (progress >= 1f)
+            {
+                easeSlider.value = currentHealth;
+                isEasing = false;
+            }
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0f, maxHealth);
+
+        if (easeSlider != null)
+        {
+            startingGhostValue = easeSlider.value;
+            timer = 0f;
+            isEasing = true;
+        }
+
+        if (currentHealth <= 0f)
+        {
+            currentHealth = 0f;
         }
     }
 }

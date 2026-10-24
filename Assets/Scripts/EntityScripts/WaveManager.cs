@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 [System.Serializable]
 public struct WaveGroup
 {
@@ -21,7 +22,11 @@ public class WaveManager : MonoBehaviour
     public Wave[] waves;
     private int waveIndex = 0;
     private bool waveStarting = false;
-
+    public TextMeshProUGUI waveText;
+    private void Start()
+    {
+        WaveText();
+    }
     public void NextWave()
     {
         if (waveStarting || waveIndex >= waves.Length)
@@ -29,8 +34,6 @@ public class WaveManager : MonoBehaviour
 
         StartCoroutine(WaveRoutine(waves[waveIndex]));
         waveIndex++;
-
-        
     }
     private IEnumerator WaveRoutine(Wave wave)
     {
@@ -51,6 +54,14 @@ public class WaveManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             NextWave();
+        }
+    }
+
+    private void WaveText()
+    {
+        if (waveText != null)
+        {
+            waveText.text = $"Wave: {waveIndex} / {waves.Length}";
         }
     }
 
