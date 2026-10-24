@@ -6,7 +6,13 @@ public class MusicNoteProjectile : MonoBehaviour
     [SerializeField] private float hitDistance = 0.5f;
     private Vector3 direction;
     private Transform target;
+    private CurrencyManager currencyManager;
     private EntityStatsManager entityStatsManager;
+
+    void Start()
+    {
+        currencyManager = FindFirstObjectByType<CurrencyManager>();
+    }
 
     public void LaunchNoteDirection(Vector3 newDirection, float newSpeed, Transform newTarget)
     {
@@ -35,6 +41,7 @@ public class MusicNoteProjectile : MonoBehaviour
             if (entityStatsManager != null)
             {
                 entityStatsManager.damageEntity(2);
+                currencyManager.AddTalas(10);
             }
 
             Destroy(gameObject);

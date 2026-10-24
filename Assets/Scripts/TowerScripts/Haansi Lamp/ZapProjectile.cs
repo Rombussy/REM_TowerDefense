@@ -4,6 +4,7 @@ public class ZapProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifetime = 5f;
+    private CurrencyManager currencyManager;
     private EntityStatsManager entityStatsManager;
     private Transform target;
     private float ProjectileDistance = 0.5f;
@@ -11,6 +12,7 @@ public class ZapProjectile : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifetime);
+        currencyManager = FindFirstObjectByType<CurrencyManager>();
     }
 
     void Update()
@@ -28,6 +30,7 @@ public class ZapProjectile : MonoBehaviour
             if (entityStatsManager != null)
             {
                 entityStatsManager.damageEntity(2);
+                currencyManager.AddTalas(10);
             }
             Destroy(gameObject);
             return;
