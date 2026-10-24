@@ -13,7 +13,7 @@ public class Blobify : MonoBehaviour
     [SerializeField] private float NotePerBurst = 1f;
     [SerializeField] private Sprite upgrade2;
     [SerializeField] private Sprite upgrade3;
-
+    public int upgradeLevel = 0;
     private SpriteRenderer spriteRenderer; 
     public float NoteLifetime = 0.5f;
     private float nextNoteTime = 0f;

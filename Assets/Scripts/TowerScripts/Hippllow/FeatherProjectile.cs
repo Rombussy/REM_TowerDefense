@@ -4,6 +4,7 @@ public class FeatherProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifetime = 5f;
+    private CurrencyManager currencyManager;
     private EntityStatsManager entityStatsManager;
     private Vector3 startPosition;
     private Vector3 direction;
@@ -14,6 +15,7 @@ public class FeatherProjectile : MonoBehaviour
     void Start()
     {
         entityStatsManager = FindFirstObjectByType<EntityStatsManager>();
+        currencyManager = FindFirstObjectByType<CurrencyManager>();
         startPosition = transform.position;
         direction = transform.right;
         Destroy(gameObject, lifetime);
@@ -36,6 +38,7 @@ public class FeatherProjectile : MonoBehaviour
             if (enemyStats != null)
             {
                 enemyStats.damageEntity(2);
+                currencyManager.AddTalas(10);
             }
 
             Destroy(gameObject);

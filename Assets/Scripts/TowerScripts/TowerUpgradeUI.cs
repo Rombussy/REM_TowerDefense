@@ -4,33 +4,63 @@ using UnityEngine.UI;
 
 public class TowerUpgradeUI : MonoBehaviour
 {
-    public Hippllow hippllow;
+    public Blobify blobify;
     public Button upgradeButton;
+    public TextMeshProUGUI upgradeButtonText;
     public TextMeshProUGUI priceText;
-    public int upgrade2Price = 50;
-    public int upgrade3Price = 100;
+    public int upgrade2Price = 1;
+    public int upgrade3Price = 2;
+    public GameObject upgradePanel;
+    public static TowerUpgradeUI Instance;
     private bool justOpened = true;
 
     private void Awake()
     {
+        Instance = this;
+
         if (upgradeButton != null)
+        {
             upgradeButton.onClick.AddListener(TryUpgrade);
+        }
+
+        upgradePanel.SetActive(false);
+    }
+
+    public void OpenForTower(GameObject selectedTower)
+    {
+        blobify = selectedTower.GetComponent<Blobify>();
+
+        if (blobify == null)
+            return;
+
+        upgradePanel.SetActive(true);
+        justOpened = true;
+
+        UpdatePrice();
+    }
+
+    public void ClosePanel()
+    {
+        upgradePanel.SetActive(false);
+        blobify = null;
     }
 
     private void TryUpgrade()
     {
-        if (hippllow == null)
+        if (blobify == null)
             return;
 
         int price;
 
-        if (hippllow.upgradeLevel == 0)
+        if (blobify.upgradeLevel == 0)
         {
             price = upgrade2Price;
-        } else if (hippllow.upgradeLevel == 1)
+        }
+        else if (blobify.upgradeLevel == 1)
         {
             price = upgrade3Price;
-        } else
+        }
+        else
         {
             return;
         }
@@ -38,66 +68,86 @@ public class TowerUpgradeUI : MonoBehaviour
         if (!CurrencyManager.instance.SpendTalas(price))
             return;
 
-        if (hippllow.upgradeLevel == 0)
+        if (blobify.upgradeLevel == 0)
         {
-            hippllow.Upgrade2_Hippllow();
+            blobify.Upgrade2_Blobify();
         }
         else
         {
-            hippllow.Upgrade3_Hippllow();
+            blobify.Upgrade3_Blobify();
         }
-        hippllow.upgradeLevel++;
-        Destroy(gameObject);
+
+        blobify.upgradeLevel++;
+
+        UpdatePrice();
+
+        if (blobify.upgradeLevel >= 2)
+        {
+            ClosePanel();
+        }
     }
 
     private void Update()
     {
+        if (!upgradePanel.activeSelf)
+            return;
+
         if (justOpened)
         {
             justOpened = false;
             return;
         }
 
-        if (hippllow == null)
+        if (blobify == null)
         {
-            Destroy(gameObject);
+            ClosePanel();
             return;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
             if (!RectTransformUtility.RectangleContainsScreenPoint(
-                GetComponent<RectTransform>(),
+                upgradePanel.GetComponent<RectTransform>(),
                 Input.mousePosition))
             {
-                Destroy(gameObject);
+                ClosePanel();
                 return;
             }
         }
 
-        if (hippllow.upgradeLevel >= 2)
-        {
-            Destroy(gameObject);
+        UpdatePrice();
+    }
+
+    private void UpdatePrice()
+    {
+        if (blobify == null || priceText == null)
             return;
-        }
 
-        int price;
-
-        if (hippllow.upgradeLevel == 0)
+        if (blobify.upgradeLevel == 0)
         {
-            price = upgrade2Price;
+            upgradeButtonText.text = "Upgrade 2";
+            priceText.text = upgrade2Price.ToString();
+        }
+        else if (blobify.upgradeLevel == 1)
+        {
+            upgradeButtonText.text = "Upgrade 3";
+            priceText.text = upgrade3Price.ToString();
         }
         else
         {
-            price = upgrade3Price;
+            priceText.text = "MAX";
         }
 
-        priceText.text = price.ToString();
+        int price = blobify.upgradeLevel == 0
+            ? upgrade2Price
+            : upgrade3Price;
     }
 
     private void OnDestroy()
     {
         if (upgradeButton != null)
+        {
             upgradeButton.onClick.RemoveListener(TryUpgrade);
+        }
     }
 }
