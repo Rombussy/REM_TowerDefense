@@ -28,10 +28,12 @@ public class TowerUpgradeUI : MonoBehaviour
 
     public void OpenForTower(GameObject selectedTower)
     {
-        blobify = selectedTower.GetComponent<Blobify>();
+        Blobify selectedBlobify = selectedTower.GetComponent<Blobify>();
 
-        if (blobify == null)
+        if (selectedBlobify == null)
             return;
+
+        blobify = selectedBlobify;
 
         upgradePanel.SetActive(true);
         justOpened = true;
@@ -45,7 +47,7 @@ public class TowerUpgradeUI : MonoBehaviour
         blobify = null;
     }
 
-    private void TryUpgrade()
+    public void TryUpgrade()
     {
         if (blobify == null)
             return;
@@ -103,18 +105,6 @@ public class TowerUpgradeUI : MonoBehaviour
             ClosePanel();
             return;
         }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (!RectTransformUtility.RectangleContainsScreenPoint(
-                upgradePanel.GetComponent<RectTransform>(),
-                Input.mousePosition))
-            {
-                ClosePanel();
-                return;
-            }
-        }
-
         UpdatePrice();
     }
 
@@ -126,17 +116,17 @@ public class TowerUpgradeUI : MonoBehaviour
         if (blobify.upgradeLevel == 0)
         {
             upgradeButtonText.text = "Upgrade 2";
-            priceText.text = upgrade2Price.ToString();
+            priceText.text = "Tala: " + upgrade2Price.ToString();
         }
         else if (blobify.upgradeLevel == 1)
         {
             upgradeButtonText.text = "Upgrade 3";
-            priceText.text = upgrade3Price.ToString();
+            priceText.text = "Tala: " + upgrade3Price.ToString();
         }
         else
         {
             priceText.text = "MAX";
-        }
+        }   
 
         int price = blobify.upgradeLevel == 0
             ? upgrade2Price
