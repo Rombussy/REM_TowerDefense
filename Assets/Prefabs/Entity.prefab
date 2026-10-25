@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityMovementManager
   damageToPlayer: 10
-  _entitySpeed: 1
+  _entitySpeed: 3
 --- !u!95 &-6314150019815990186
 Animator:
   serializedVersion: 7

@@ -1832,8 +1832,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -795, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -746.0785, y: -1.3223}
+  m_SizeDelta: {x: 297.843, y: 52.6445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125533548
 MonoBehaviour:
@@ -1857,8 +1857,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'WAVE:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3641,7 +3641,15 @@ MonoBehaviour:
   entityPools:
   - type: 0
     entityPrefab: {fileID: 389783913453217010, guid: d825984c9bbe25140a3daf5a4961cbd9, type: 3}
-    poolSize: 20
+    poolSize: 50
+    spawnList: []
+  - type: 1
+    entityPrefab: {fileID: 2671520487407896162, guid: 623b2ebb4ee3c504b91185f8cd3dc39e, type: 3}
+    poolSize: 50
+    spawnList: []
+  - type: 2
+    entityPrefab: {fileID: 9119353364822983871, guid: 06e769b18feba3d4bb98960dfc1570da, type: 3}
+    poolSize: 50
     spawnList: []
 --- !u!4 &1398740323
 Transform:
@@ -4038,7 +4046,73 @@ MonoBehaviour:
   waves:
   - waveGroups:
     - entityType: 0
+      count: 30
+      spawnInterval: 0.4
+  - waveGroups:
+    - entityType: 0
+      count: 35
+      spawnInterval: 0.4
+  - waveGroups:
+    - entityType: 0
+      count: 35
+      spawnInterval: 0.4
+  - waveGroups:
+    - entityType: 0
+      count: 40
+      spawnInterval: 0.4
+  - waveGroups:
+    - entityType: 0
+      count: 40
+      spawnInterval: 0.4
+    - entityType: 2
       count: 20
+      spawnInterval: 1
+  - waveGroups:
+    - entityType: 0
+      count: 40
+      spawnInterval: 0.4
+    - entityType: 2
+      count: 20
+      spawnInterval: 1
+  - waveGroups:
+    - entityType: 0
+      count: 45
+      spawnInterval: 0.4
+    - entityType: 2
+      count: 30
+      spawnInterval: 1
+    - entityType: 1
+      count: 20
+      spawnInterval: 1
+  - waveGroups:
+    - entityType: 0
+      count: 50
+      spawnInterval: 0.4
+    - entityType: 2
+      count: 30
+      spawnInterval: 0.7
+    - entityType: 1
+      count: 30
+      spawnInterval: 1
+  - waveGroups:
+    - entityType: 0
+      count: 50
+      spawnInterval: 0.4
+    - entityType: 2
+      count: 30
+      spawnInterval: 0.7
+    - entityType: 1
+      count: 30
+      spawnInterval: 1
+  - waveGroups:
+    - entityType: 0
+      count: 50
+      spawnInterval: 0.4
+    - entityType: 2
+      count: 30
+      spawnInterval: 0.7
+    - entityType: 1
+      count: 40
       spawnInterval: 1
   waveText: {fileID: 1125533548}
 --- !u!4 &1578711547
@@ -5677,8 +5751,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
