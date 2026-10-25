@@ -42,6 +42,14 @@ public class CurrencyManager : MonoBehaviour
         return true;
     }
 
+    public void BuyTower(int cost)
+    {
+        if (SpendTalas(cost))
+        {
+            Debug.Log("Tower purchased for " + cost + " Talas.");
+        }
+    }
+
     public void UpdateTalasUI()
     {
         if (talasText != null)
