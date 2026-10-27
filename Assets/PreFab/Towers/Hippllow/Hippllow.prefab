@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 4362579835571275808}
   - component: {fileID: 6678829535712178849}
   - component: {fileID: 2616620830522081113}
+  - component: {fileID: 6590057970371906792}
   m_Layer: 0
   m_Name: Hippllow
   m_TagString: Untagged
@@ -895,6 +896,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.42, y: 0.37}
   m_EdgeRadius: 0
+--- !u!114 &6590057970371906792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5611998413439896970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7383c706e935ab4a8adad229ed9e80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerData
+  cost: 200
 --- !u!1 &7494952663293034167
 GameObject:
   m_ObjectHideFlags: 0

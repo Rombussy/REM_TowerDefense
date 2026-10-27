@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1895818161805765854}
   - component: {fileID: 7882599561685653533}
-  - component: {fileID: 5624922498149050435}
   - component: {fileID: -1910664355523447361}
   m_Layer: 0
   m_Name: GhostTower
@@ -93,25 +92,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5624922498149050435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3135490113273459226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef0224c196ebe4e41bf66255d5805484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TowerUpgradeUIHipplow
-  hippllow: {fileID: 0}
-  upgradeButton: {fileID: 0}
-  upgradeButtonText: {fileID: 0}
-  priceText: {fileID: 0}
-  upgrade2Price: 115
-  upgrade3Price: 190
-  upgradePanel: {fileID: 0}
 --- !u!61 &-1910664355523447361
 BoxCollider2D:
   m_ObjectHideFlags: 0

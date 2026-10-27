@@ -50,6 +50,7 @@ public class TowerPlacement : MonoBehaviour
 
         ghostInstance.transform.position = worldCenter + new Vector3(0, placableMap.cellSize.y * 0.25f);
 
+        bool _afford = CurrencyManager.instance != null && CurrencyManager.instance.talas >= towerCost();
         bool valid = placableMap.HasTile(cellPos) &&
                      (nonPlacableMap == null || !nonPlacableMap.HasTile(cellPos)) &&
                      !occupiedTiles.Contains(cellPos);
@@ -60,6 +61,8 @@ public class TowerPlacement : MonoBehaviour
             ghostComp.setValid(valid);
         }
     }
+
+
 
     void HandlePlacementClick()
     {
@@ -79,10 +82,24 @@ public class TowerPlacement : MonoBehaviour
         if (nonPlacableMap != null && nonPlacableMap.HasTile(cellPos)) return;
         if (occupiedTiles.Contains(cellPos)) return;
 
-        Instantiate(TowerSelectionUI.selectedTower, ghostInstance.transform.position, Quaternion.identity);
+        int cost = towerCost();
+        if (CurrencyManager.instance != null && CurrencyManager.instance.SpendTalas(cost))
+        {
+            Instantiate(TowerSelectionUI.selectedTower, ghostInstance.transform.position, Quaternion.identity);
+            TowerSelectionUI.selectedTower = null;
+            occupiedTiles.Add(cellPos);
+        }
 
-        TowerSelectionUI.selectedTower = null;
-
-        occupiedTiles.Add(cellPos);
+    }
+    int towerCost()
+    {
+        if (TowerSelectionUI.selectedTower == null)
+            return 0;
+        TowerData tower = TowerSelectionUI.selectedTower.GetComponentInChildren<TowerData>();
+        if (tower != null)
+        {
+            return tower.cost;
+        }
+        return 0;
     }
 }
