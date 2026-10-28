@@ -704,7 +704,7 @@ MonoBehaviour:
   circlePoints: 14
   FeatherSpawnrate: 1.4
   FeatherPerBurst: 1
-  FeatherInterval: 0.3
+  FeatherInterval: 0.5
   upgrade2: {fileID: -6639474419166266559, guid: b8c355dc8d43d8f4ca418a5c1bc7ccd8, type: 3}
   upgrade3: {fileID: 5596677369990683788, guid: 7af77a0fd6a76da499f8e36665c8bd60, type: 3}
   upgradeLevel: 0

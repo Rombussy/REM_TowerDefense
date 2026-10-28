@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7383c706e935ab4a8adad229ed9e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
-  cost: 400
+  cost: 350
 --- !u!1 &8868901092381911842
 GameObject:
   m_ObjectHideFlags: 0

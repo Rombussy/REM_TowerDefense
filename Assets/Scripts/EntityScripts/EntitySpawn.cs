@@ -37,6 +37,14 @@ public class EntitySpawn : MonoBehaviour
                 {
                     if (!entity.activeInHierarchy)
                     {
+                        if (path != null && path.Length > 0)
+                        {
+                            entity.transform.position = path[0].p0;
+                        }
+                        else
+                        {
+                            entity.transform.position = transform.position;
+                        }
                         entity.SetActive(true);
                         EntityMovementManager movement = entity.GetComponent<EntityMovementManager>();
                         if (movement != null)
