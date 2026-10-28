@@ -24,6 +24,7 @@ public class WaveManager : MonoBehaviour
     public Wave[] waves;
     public TextMeshProUGUI waveText;
     public GameObject spacePrompt;
+    public GameObject winPanel;
 
     private int waveIndex = 0;
     private bool waveStarting = false;
@@ -77,7 +78,15 @@ public class WaveManager : MonoBehaviour
 
         waveStarting = false;
 
-        if (spacePrompt != null && waveIndex < waves.Length)
+        if (waveIndex >= waves.Length)
+        {
+            if (winPanel != null)
+            {
+                winPanel.SetActive(true);
+            }
+            Time.timeScale = 0f;
+        }
+        else if (spacePrompt != null)
         {
             spacePrompt.SetActive(true);
         }
